@@ -20,7 +20,7 @@ import com.hk.trans.model.Customer;
  * @author harikiran
  *
  */
-@SpringBootApplication
+//@SpringBootApplication
 public class Application implements CommandLineRunner {
 
 	private static final SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");

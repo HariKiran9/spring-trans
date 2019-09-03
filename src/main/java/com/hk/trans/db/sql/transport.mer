@@ -1,0 +1,919 @@
+<ERDiagram version="1.1">
+<Connection session="Transport" database="transport" />
+<Drawing gridVisible="false" snapOn="false" fastRouting="false" />
+<Tables>
+<Table name="CUSTOMER">
+<Drawing expanded="true" location="207,471" dimensions="216,246" />
+<Columns>
+<Column name="CUSTOMER_ID" primary_key="true" foreign_key="false" required="true" unique="false">
+<Data type="NUMBER" size="6" />
+</Column>
+<Column name="NAME" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="45" />
+</Column>
+<Column name="ADDRESS" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="40" />
+</Column>
+<Column name="CITY" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="30" />
+</Column>
+<Column name="STATE" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="2" />
+</Column>
+<Column name="ZIP_CODE" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="9" />
+</Column>
+<Column name="AREA_CODE" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="NUMBER" size="3" />
+</Column>
+<Column name="PHONE_NUMBER" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="NUMBER" size="7" />
+</Column>
+<Column name="SALESPERSON_ID" primary_key="false" foreign_key="true" required="false" unique="false">
+<Data type="NUMBER" size="4" />
+</Column>
+<Column name="CREDIT_LIMIT" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="NUMBER" size="10,2" />
+</Column>
+<Column name="COMMENTS" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="LONG" size="0" />
+</Column>
+</Columns>
+</Table>
+<Table name="DEPARTMENT">
+<Drawing expanded="true" location="0,1141" dimensions="223,86" />
+<Columns>
+<Column name="DEPARTMENT_ID" primary_key="true" foreign_key="false" required="true" unique="false">
+<Data type="NUMBER" size="2" />
+</Column>
+<Column name="NAME" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="14" />
+</Column>
+<Column name="LOCATION_ID" primary_key="false" foreign_key="true" required="false" unique="false">
+<Data type="NUMBER" size="3" />
+</Column>
+</Columns>
+</Table>
+<Table name="EMPLOYEE">
+<Drawing expanded="true" location="156,817" dimensions="212,224" />
+<Columns>
+<Column name="EMPLOYEE_ID" primary_key="true" foreign_key="false" required="true" unique="false">
+<Data type="NUMBER" size="4" />
+</Column>
+<Column name="LAST_NAME" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="15" />
+</Column>
+<Column name="FIRST_NAME" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="15" />
+</Column>
+<Column name="MIDDLE_INITIAL" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="1" />
+</Column>
+<Column name="JOB_ID" primary_key="false" foreign_key="true" required="false" unique="false">
+<Data type="NUMBER" size="3" />
+</Column>
+<Column name="MANAGER_ID" primary_key="false" foreign_key="true" required="false" unique="false">
+<Data type="NUMBER" size="4" />
+</Column>
+<Column name="HIRE_DATE" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="DATE" size="7" />
+</Column>
+<Column name="SALARY" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="NUMBER" size="10,2" />
+</Column>
+<Column name="COMMISSION" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="NUMBER" size="10,2" />
+</Column>
+<Column name="DEPARTMENT_ID" primary_key="false" foreign_key="true" required="false" unique="false">
+<Data type="NUMBER" size="2" />
+</Column>
+</Columns>
+</Table>
+<Table name="ITEM">
+<Drawing expanded="true" location="265,0" dimensions="201,145" />
+<Columns>
+<Column name="ORDER_ID" primary_key="true" foreign_key="true" required="true" unique="false">
+<Data type="NUMBER" size="4" />
+</Column>
+<Column name="ITEM_ID" primary_key="true" foreign_key="false" required="true" unique="false">
+<Data type="NUMBER" size="4" />
+</Column>
+<Column name="PRODUCT_ID" primary_key="false" foreign_key="true" required="false" unique="false">
+<Data type="NUMBER" size="6" />
+</Column>
+<Column name="ACTUAL_PRICE" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="NUMBER" size="10,2" />
+</Column>
+<Column name="QUANTITY" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="NUMBER" size="8" />
+</Column>
+<Column name="TOTAL" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="NUMBER" size="10,2" />
+</Column>
+</Columns>
+</Table>
+<Table name="JOB">
+<Drawing expanded="true" location="323,1150" dimensions="181,67" />
+<Columns>
+<Column name="JOB_ID" primary_key="true" foreign_key="false" required="true" unique="false">
+<Data type="NUMBER" size="3" />
+</Column>
+<Column name="FUNCTION" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="30" />
+</Column>
+</Columns>
+</Table>
+<Table name="LOCATION">
+<Drawing expanded="true" location="1,1327" dimensions="221,67" />
+<Columns>
+<Column name="LOCATION_ID" primary_key="true" foreign_key="false" required="true" unique="false">
+<Data type="NUMBER" size="3" />
+</Column>
+<Column name="REGIONAL_GROUP" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="20" />
+</Column>
+</Columns>
+</Table>
+<Table name="PRICE">
+<Drawing expanded="true" location="566,9" dimensions="199,126" />
+<Columns>
+<Column name="PRODUCT_ID" primary_key="true" foreign_key="true" required="true" unique="false">
+<Data type="NUMBER" size="6" />
+</Column>
+<Column name="LIST_PRICE" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="NUMBER" size="10,2" />
+</Column>
+<Column name="MIN_PRICE" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="NUMBER" size="10,2" />
+</Column>
+<Column name="START_DATE" primary_key="true" foreign_key="false" required="true" unique="false">
+<Data type="DATE" size="7" />
+</Column>
+<Column name="END_DATE" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="DATE" size="7" />
+</Column>
+</Columns>
+</Table>
+<Table name="PRODUCT">
+<Drawing expanded="true" location="514,274" dimensions="202,67" />
+<Columns>
+<Column name="PRODUCT_ID" primary_key="true" foreign_key="false" required="true" unique="false">
+<Data type="NUMBER" size="6" />
+</Column>
+<Column name="DESCRIPTION" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="30" />
+</Column>
+</Columns>
+</Table>
+<Table name="SALARY_GRADE">
+<Drawing expanded="true" location="461,1732" dimensions="203,87" />
+<Columns>
+<Column name="GRADE_ID" primary_key="true" foreign_key="false" required="true" unique="false">
+<Data type="NUMBER" size="3" />
+</Column>
+<Column name="LOWER_BOUND" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="NUMBER" size="10,2" />
+</Column>
+<Column name="UPPER_BOUND" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="NUMBER" size="10,2" />
+</Column>
+</Columns>
+</Table>
+<Table name="SALES_ORDER">
+<Drawing expanded="true" location="216,245" dimensions="198,126" />
+<Columns>
+<Column name="ORDER_ID" primary_key="true" foreign_key="false" required="true" unique="false">
+<Data type="NUMBER" size="4" />
+</Column>
+<Column name="ORDER_DATE" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="DATE" size="7" />
+</Column>
+<Column name="CUSTOMER_ID" primary_key="false" foreign_key="true" required="false" unique="false">
+<Data type="NUMBER" size="6" />
+</Column>
+<Column name="SHIP_DATE" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="DATE" size="7" />
+</Column>
+<Column name="TOTAL" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="NUMBER" size="10,2" />
+</Column>
+</Columns>
+</Table>
+<Table name="MD$DICTVER">
+<Drawing expanded="true" location="709,1732" dimensions="276,68" />
+<Columns>
+<Column name="MD_DICTIONARY_VERSION_C" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="30" />
+</Column>
+<Column name="MD_DICTIONARY_VERSION_N" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="NUMBER" size="10" />
+</Column>
+</Columns>
+</Table>
+<Table name="OGIS_SPATIAL_REFERENCE_SYSTEMS">
+<Drawing expanded="true" location="1145,1439" dimensions="231,127" />
+<Columns>
+<Column name="SRID" primary_key="true" foreign_key="false" required="true" unique="false">
+<Data type="NUMBER" size="22" />
+</Column>
+<Column name="AUTH_NAME" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="100" />
+</Column>
+<Column name="AUTH_SRID" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="NUMBER" size="22" />
+</Column>
+<Column name="SRTEXT" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="1000" />
+</Column>
+<Column name="SRNUM" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="NUMBER" size="22" />
+</Column>
+</Columns>
+</Table>
+<Table name="MTS_PROXY_INFO">
+<Drawing expanded="true" location="910,1439" dimensions="190,148" />
+<Columns>
+<Column name="WBBUF" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="RAW" size="1024" />
+</Column>
+<Column name="WBSIZ" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="NUMBER" size="8" />
+</Column>
+<Column name="HOSTNAME" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="255" />
+</Column>
+<Column name="PIPENAME" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="255" />
+</Column>
+<Column name="INCNO" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="NUMBER" size="8" />
+</Column>
+<Column name="RMGUID" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="RAW" size="16" />
+</Column>
+</Columns>
+</Table>
+<Table name="EMP">
+<Drawing expanded="true" location="231,1439" dimensions="179,187" />
+<Columns>
+<Column name="EMPNO" primary_key="true" foreign_key="false" required="true" unique="false">
+<Data type="NUMBER" size="4" />
+</Column>
+<Column name="ENAME" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="10" />
+</Column>
+<Column name="JOB" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="9" />
+</Column>
+<Column name="MGR" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="NUMBER" size="4" />
+</Column>
+<Column name="HIREDATE" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="DATE" size="7" />
+</Column>
+<Column name="SAL" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="NUMBER" size="10,2" />
+</Column>
+<Column name="COMM" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="NUMBER" size="10,2" />
+</Column>
+<Column name="DEPTNO" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="NUMBER" size="2" />
+</Column>
+</Columns>
+</Table>
+<Table name="STUDETAILS">
+<Drawing expanded="true" location="455,1439" dimensions="170,187" />
+<Columns>
+<Column name="SID" primary_key="true" foreign_key="false" required="true" unique="false">
+<Data type="NUMBER" size="10" />
+</Column>
+<Column name="SNAME" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="20" />
+</Column>
+<Column name="FNAME" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="20" />
+</Column>
+<Column name="DOB" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="10" />
+</Column>
+<Column name="BG" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="10" />
+</Column>
+<Column name="GENDER" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="5" />
+</Column>
+<Column name="COURSE" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="10" />
+</Column>
+<Column name="ADDR" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="40" />
+</Column>
+</Columns>
+</Table>
+<Table name="AUDIT_ACTIONS">
+<Drawing expanded="true" location="1768,1732" dimensions="171,68" />
+<Columns>
+<Column name="ACTION" primary_key="false" foreign_key="false" required="true" unique="false">
+<Data type="NUMBER" size="22" />
+</Column>
+<Column name="NAME" primary_key="false" foreign_key="false" required="true" unique="false">
+<Data type="VARCHAR2" size="27" />
+</Column>
+</Columns>
+</Table>
+<Table name="AURORA$IIOP$SYSTEM$PROPERTIES">
+<Drawing expanded="true" location="1030,1732" dimensions="230,68" />
+<Columns>
+<Column name="KEY" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="200" />
+</Column>
+<Column name="VALUE" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="1024" />
+</Column>
+</Columns>
+</Table>
+<Table name="DUAL">
+<Drawing expanded="true" location="0,1865" dimensions="159,48" />
+<Columns>
+<Column name="DUMMY" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="1" />
+</Column>
+</Columns>
+</Table>
+<Table name="PSTUBTBL">
+<Drawing expanded="true" location="670,1439" dimensions="195,148" />
+<Columns>
+<Column name="USERNAME" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="30" />
+</Column>
+<Column name="DBNAME" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="128" />
+</Column>
+<Column name="LUN" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="30" />
+</Column>
+<Column name="LUTYPE" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="3" />
+</Column>
+<Column name="LINENO" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="NUMBER" size="22" />
+</Column>
+<Column name="LINE" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="1800" />
+</Column>
+</Columns>
+</Table>
+<Table name="STMT_AUDIT_OPTION_MAP">
+<Drawing expanded="true" location="1421,1439" dimensions="187,88" />
+<Columns>
+<Column name="OPTION#" primary_key="false" foreign_key="false" required="true" unique="false">
+<Data type="NUMBER" size="22" />
+</Column>
+<Column name="NAME" primary_key="false" foreign_key="false" required="true" unique="false">
+<Data type="VARCHAR2" size="40" />
+</Column>
+<Column name="PROPERTY" primary_key="false" foreign_key="false" required="true" unique="false">
+<Data type="NUMBER" size="22" />
+</Column>
+</Columns>
+</Table>
+<Table name="SYSTEM_PRIVILEGE_MAP">
+<Drawing expanded="true" location="1653,1439" dimensions="187,88" />
+<Columns>
+<Column name="PRIVILEGE" primary_key="false" foreign_key="false" required="true" unique="false">
+<Data type="NUMBER" size="22" />
+</Column>
+<Column name="NAME" primary_key="false" foreign_key="false" required="true" unique="false">
+<Data type="VARCHAR2" size="40" />
+</Column>
+<Column name="PROPERTY" primary_key="false" foreign_key="false" required="true" unique="false">
+<Data type="NUMBER" size="22" />
+</Column>
+</Columns>
+</Table>
+<Table name="TABLE_PRIVILEGE_MAP">
+<Drawing expanded="true" location="1305,1732" dimensions="187,68" />
+<Columns>
+<Column name="PRIVILEGE" primary_key="false" foreign_key="false" required="true" unique="false">
+<Data type="NUMBER" size="22" />
+</Column>
+<Column name="NAME" primary_key="false" foreign_key="false" required="true" unique="false">
+<Data type="VARCHAR2" size="40" />
+</Column>
+</Columns>
+</Table>
+<Table name="DEF$_TEMP$LOB">
+<Drawing expanded="true" location="231,1732" dimensions="185,88" />
+<Columns>
+<Column name="TEMP$BLOB" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="BLOB" size="4000" />
+</Column>
+<Column name="TEMP$CLOB" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="CLOB" size="4000" />
+</Column>
+<Column name="TEMP$NCLOB" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="NCLOB" size="4000" />
+</Column>
+</Columns>
+</Table>
+<Table name="ADMIN_DETAILS">
+<Drawing expanded="true" location="1537,1732" dimensions="186,68" />
+<Columns>
+<Column name="NAME" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="20" />
+</Column>
+<Column name="PASSWORD" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="20" />
+</Column>
+</Columns>
+</Table>
+<Table name="BLOCK_DETAILS">
+<Drawing expanded="true" location="1633,0" dimensions="186,248" />
+<Columns>
+<Column name="NAME" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="25" />
+</Column>
+<Column name="PASSWORD" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="10" />
+</Column>
+<Column name="PREDESG" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="20" />
+</Column>
+<Column name="MAILID" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="30" />
+</Column>
+<Column name="PHNO" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="NUMBER" size="22" />
+</Column>
+<Column name="QUAL" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="10" />
+</Column>
+<Column name="EXP" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="NUMBER" size="22" />
+</Column>
+<Column name="PREVINST" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="20" />
+</Column>
+<Column name="PRESAL" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="NUMBER" size="22" />
+</Column>
+<Column name="EXPTSAL" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="NUMBER" size="22" />
+</Column>
+<Column name="ADDR" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="30" />
+</Column>
+</Columns>
+</Table>
+<Table name="DRIVER_DETAILS">
+<Drawing expanded="true" location="810,588" dimensions="209,266" />
+<Columns>
+<Column name="DRIVER_ID" primary_key="true" foreign_key="false" required="true" unique="true">
+<Data type="NUMBER" size="20" />
+</Column>
+<Column name="DRIVER_NAME" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="20" />
+</Column>
+<Column name="DOB" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="20" />
+</Column>
+<Column name="GENDER" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="20" />
+</Column>
+<Column name="QUALIFICATION" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="20" />
+</Column>
+<Column name="EXPERIENCE" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="20" />
+</Column>
+<Column name="LICENCE_NO" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="20" />
+</Column>
+<Column name="LICENCE_TYPE" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="20" />
+</Column>
+<Column name="DOJ" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="20" />
+</Column>
+<Column name="SALARY" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="NUMBER" size="10,3" />
+</Column>
+<Column name="LOC_NAME" primary_key="false" foreign_key="true" required="false" unique="false">
+<Data type="VARCHAR2" size="20" />
+</Column>
+<Column name="ADDRESS" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="30" />
+</Column>
+</Columns>
+</Table>
+<Table name="HALT_DETAILS">
+<Drawing expanded="true" location="1290,352" dimensions="188,107" />
+<Columns>
+<Column name="HALT_ID" primary_key="true" foreign_key="false" required="true" unique="true">
+<Data type="NUMBER" size="20" />
+</Column>
+<Column name="HALT_NAME" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="20" />
+</Column>
+<Column name="IN_STUDS" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="NUMBER" size="20" />
+</Column>
+<Column name="OUT_STUDS" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="NUMBER" size="20" />
+</Column>
+</Columns>
+</Table>
+<Table name="HELPER_DETAILS">
+<Drawing expanded="true" location="1119,628" dimensions="200,186" />
+<Columns>
+<Column name="HELPER_ID" primary_key="true" foreign_key="false" required="true" unique="true">
+<Data type="NUMBER" size="20" />
+</Column>
+<Column name="HELPER_NAME" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="20" />
+</Column>
+<Column name="DOB" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="20" />
+</Column>
+<Column name="DOJ" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="20" />
+</Column>
+<Column name="SALARY" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="NUMBER" size="10,3" />
+</Column>
+<Column name="GENDER" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="20" />
+</Column>
+<Column name="LOC_NAME" primary_key="false" foreign_key="true" required="false" unique="false">
+<Data type="VARCHAR2" size="20" />
+</Column>
+<Column name="ADDRESS" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="30" />
+</Column>
+</Columns>
+</Table>
+<Table name="LOCATION_DETAILS">
+<Drawing expanded="true" location="1125,954" dimensions="189,87" />
+<Columns>
+<Column name="LOC_NAME" primary_key="true" foreign_key="false" required="true" unique="true">
+<Data type="VARCHAR2" size="20" />
+</Column>
+<Column name="LAND_MARK" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="20" />
+</Column>
+<Column name="ADDRESS" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="30" />
+</Column>
+</Columns>
+</Table>
+<Table name="REG_DETAILS">
+<Drawing expanded="true" location="0,1439" dimensions="186,248" />
+<Columns>
+<Column name="NAME" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="25" />
+</Column>
+<Column name="PASSWORD" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="10" />
+</Column>
+<Column name="PREDESG" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="20" />
+</Column>
+<Column name="MAILID" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="30" />
+</Column>
+<Column name="PHNO" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="NUMBER" size="22" />
+</Column>
+<Column name="QUAL" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="10" />
+</Column>
+<Column name="EXP" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="NUMBER" size="22" />
+</Column>
+<Column name="PREVINST" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="20" />
+</Column>
+<Column name="PRESAL" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="NUMBER" size="22" />
+</Column>
+<Column name="EXPTSAL" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="NUMBER" size="22" />
+</Column>
+<Column name="ADDR" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="30" />
+</Column>
+</Columns>
+</Table>
+<Table name="ROUTE_DETAILS">
+<Drawing expanded="true" location="1088,0" dimensions="198,223" />
+<Columns>
+<Column name="ROUTE_ID" primary_key="true" foreign_key="false" required="true" unique="true">
+<Data type="NUMBER" size="20" />
+</Column>
+<Column name="ROUTE_NAME" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="20" />
+</Column>
+<Column name="NO_STUDS" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="NUMBER" size="20" />
+</Column>
+<Column name="TOTAL_HALTS" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="NUMBER" size="20" />
+</Column>
+<Column name="START_POINT" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="20" />
+</Column>
+<Column name="DEST_POINT" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="20" />
+</Column>
+<Column name="VEHICLE_ID" primary_key="false" foreign_key="true" required="false" unique="false">
+<Data type="NUMBER" size="20" />
+</Column>
+<Column name="DRIVER_ID" primary_key="false" foreign_key="true" required="false" unique="false">
+<Data type="NUMBER" size="20" />
+</Column>
+<Column name="HELPER_ID" primary_key="false" foreign_key="true" required="false" unique="false">
+<Data type="NUMBER" size="20" />
+</Column>
+<Column name="HALT_ID" primary_key="false" foreign_key="true" required="false" unique="false">
+<Data type="NUMBER" size="20" />
+</Column>
+</Columns>
+</Table>
+<Table name="STUDENT_DETAILS">
+<Drawing expanded="true" location="1419,608" dimensions="169,226" />
+<Columns>
+<Column name="S_ID" primary_key="true" foreign_key="false" required="true" unique="true">
+<Data type="NUMBER" size="20" />
+</Column>
+<Column name="F_NAME" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="20" />
+</Column>
+<Column name="L_NAME" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="20" />
+</Column>
+<Column name="FNAME" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="20" />
+</Column>
+<Column name="DOB" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="10" />
+</Column>
+<Column name="CLS" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="10" />
+</Column>
+<Column name="SEC" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="20" />
+</Column>
+<Column name="GENDER" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="20" />
+</Column>
+<Column name="LOC" primary_key="false" foreign_key="true" required="false" unique="false">
+<Data type="VARCHAR2" size="20" />
+</Column>
+<Column name="ADDR" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="30" />
+</Column>
+</Columns>
+</Table>
+<Table name="USER_DETAILS">
+<Drawing expanded="true" location="0,1732" dimensions="186,88" />
+<Columns>
+<Column name="USERNAME" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="20" />
+</Column>
+<Column name="PASSWORD" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="20" />
+</Column>
+<Column name="DESG" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="20" />
+</Column>
+</Columns>
+</Table>
+<Table name="VEHICLE_DETAILS">
+<Drawing expanded="true" location="966,323" dimensions="204,165" />
+<Columns>
+<Column name="VEHICLE_ID" primary_key="true" foreign_key="false" required="true" unique="true">
+<Data type="NUMBER" size="20" />
+</Column>
+<Column name="VEHICLE_NAME" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="20" />
+</Column>
+<Column name="CAPACITY" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="20" />
+</Column>
+<Column name="MILAGE" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="VARCHAR2" size="20" />
+</Column>
+<Column name="TOTAL_TRIPS" primary_key="false" foreign_key="false" required="false" unique="false">
+<Data type="NUMBER" size="20" />
+</Column>
+<Column name="DRIVER_ID" primary_key="false" foreign_key="true" required="false" unique="false">
+<Data type="NUMBER" size="20" />
+</Column>
+<Column name="HELPER_ID" primary_key="false" foreign_key="true" required="false" unique="false">
+<Data type="NUMBER" size="20" />
+</Column>
+</Columns>
+</Table>
+</Tables>
+<Relationships>
+<Relationship name="SYS_C00798">
+<Details primary_table="EMPLOYEE" foreign_table="CUSTOMER">
+<PrimaryKeys>
+<ColumnName name="EMPLOYEE_ID" />
+</PrimaryKeys>
+<ForeignKeys>
+<ColumnName name="SALESPERSON_ID" />
+</ForeignKeys>
+</Details>
+<Drawing routingType="0" />
+</Relationship>
+<Relationship name="SYS_C00799">
+<Details primary_table="LOCATION" foreign_table="DEPARTMENT">
+<PrimaryKeys>
+<ColumnName name="LOCATION_ID" />
+</PrimaryKeys>
+<ForeignKeys>
+<ColumnName name="LOCATION_ID" />
+</ForeignKeys>
+</Details>
+<Drawing routingType="0" />
+</Relationship>
+<Relationship name="SYS_C00801">
+<Details primary_table="EMPLOYEE" foreign_table="EMPLOYEE">
+<PrimaryKeys>
+<ColumnName name="EMPLOYEE_ID" />
+</PrimaryKeys>
+<ForeignKeys>
+<ColumnName name="MANAGER_ID" />
+</ForeignKeys>
+</Details>
+<Drawing routingType="0" />
+</Relationship>
+<Relationship name="SYS_C00802">
+<Details primary_table="DEPARTMENT" foreign_table="EMPLOYEE">
+<PrimaryKeys>
+<ColumnName name="DEPARTMENT_ID" />
+</PrimaryKeys>
+<ForeignKeys>
+<ColumnName name="DEPARTMENT_ID" />
+</ForeignKeys>
+</Details>
+<Drawing routingType="0" />
+</Relationship>
+<Relationship name="SYS_C00800">
+<Details primary_table="JOB" foreign_table="EMPLOYEE">
+<PrimaryKeys>
+<ColumnName name="JOB_ID" />
+</PrimaryKeys>
+<ForeignKeys>
+<ColumnName name="JOB_ID" />
+</ForeignKeys>
+</Details>
+<Drawing routingType="0" />
+</Relationship>
+<Relationship name="SYS_C00804">
+<Details primary_table="PRODUCT" foreign_table="ITEM">
+<PrimaryKeys>
+<ColumnName name="PRODUCT_ID" />
+</PrimaryKeys>
+<ForeignKeys>
+<ColumnName name="PRODUCT_ID" />
+</ForeignKeys>
+</Details>
+<Drawing routingType="0" />
+</Relationship>
+<Relationship name="SYS_C00803">
+<Details primary_table="SALES_ORDER" foreign_table="ITEM">
+<PrimaryKeys>
+<ColumnName name="ORDER_ID" />
+</PrimaryKeys>
+<ForeignKeys>
+<ColumnName name="ORDER_ID" />
+</ForeignKeys>
+</Details>
+<Drawing routingType="0" />
+</Relationship>
+<Relationship name="SYS_C00805">
+<Details primary_table="PRODUCT" foreign_table="PRICE">
+<PrimaryKeys>
+<ColumnName name="PRODUCT_ID" />
+</PrimaryKeys>
+<ForeignKeys>
+<ColumnName name="PRODUCT_ID" />
+</ForeignKeys>
+</Details>
+<Drawing routingType="0" />
+</Relationship>
+<Relationship name="SYS_C00806">
+<Details primary_table="CUSTOMER" foreign_table="SALES_ORDER">
+<PrimaryKeys>
+<ColumnName name="CUSTOMER_ID" />
+</PrimaryKeys>
+<ForeignKeys>
+<ColumnName name="CUSTOMER_ID" />
+</ForeignKeys>
+</Details>
+<Drawing routingType="0" />
+</Relationship>
+<Relationship name="SYS_C001480">
+<Details primary_table="LOCATION_DETAILS" foreign_table="DRIVER_DETAILS">
+<PrimaryKeys>
+<ColumnName name="LOC_NAME" />
+</PrimaryKeys>
+<ForeignKeys>
+<ColumnName name="LOC_NAME" />
+</ForeignKeys>
+</Details>
+<Drawing routingType="0" />
+</Relationship>
+<Relationship name="SYS_C001482">
+<Details primary_table="LOCATION_DETAILS" foreign_table="HELPER_DETAILS">
+<PrimaryKeys>
+<ColumnName name="LOC_NAME" />
+</PrimaryKeys>
+<ForeignKeys>
+<ColumnName name="LOC_NAME" />
+</ForeignKeys>
+</Details>
+<Drawing routingType="0" />
+</Relationship>
+<Relationship name="SYS_C001490">
+<Details primary_table="HELPER_DETAILS" foreign_table="ROUTE_DETAILS">
+<PrimaryKeys>
+<ColumnName name="HELPER_ID" />
+</PrimaryKeys>
+<ForeignKeys>
+<ColumnName name="HELPER_ID" />
+</ForeignKeys>
+</Details>
+<Drawing routingType="0" />
+</Relationship>
+<Relationship name="SYS_C001488">
+<Details primary_table="VEHICLE_DETAILS" foreign_table="ROUTE_DETAILS">
+<PrimaryKeys>
+<ColumnName name="VEHICLE_ID" />
+</PrimaryKeys>
+<ForeignKeys>
+<ColumnName name="VEHICLE_ID" />
+</ForeignKeys>
+</Details>
+<Drawing routingType="0" />
+</Relationship>
+<Relationship name="SYS_C001489">
+<Details primary_table="DRIVER_DETAILS" foreign_table="ROUTE_DETAILS">
+<PrimaryKeys>
+<ColumnName name="DRIVER_ID" />
+</PrimaryKeys>
+<ForeignKeys>
+<ColumnName name="DRIVER_ID" />
+</ForeignKeys>
+</Details>
+<Drawing routingType="0" />
+</Relationship>
+<Relationship name="SYS_C001491">
+<Details primary_table="HALT_DETAILS" foreign_table="ROUTE_DETAILS">
+<PrimaryKeys>
+<ColumnName name="HALT_ID" />
+</PrimaryKeys>
+<ForeignKeys>
+<ColumnName name="HALT_ID" />
+</ForeignKeys>
+</Details>
+<Drawing routingType="0" />
+</Relationship>
+<Relationship name="SYS_C001493">
+<Details primary_table="LOCATION_DETAILS" foreign_table="STUDENT_DETAILS">
+<PrimaryKeys>
+<ColumnName name="LOC_NAME" />
+</PrimaryKeys>
+<ForeignKeys>
+<ColumnName name="LOC" />
+</ForeignKeys>
+</Details>
+<Drawing routingType="0" />
+</Relationship>
+<Relationship name="SYS_C001486">
+<Details primary_table="HELPER_DETAILS" foreign_table="VEHICLE_DETAILS">
+<PrimaryKeys>
+<ColumnName name="HELPER_ID" />
+</PrimaryKeys>
+<ForeignKeys>
+<ColumnName name="HELPER_ID" />
+</ForeignKeys>
+</Details>
+<Drawing routingType="0" />
+</Relationship>
+<Relationship name="SYS_C001485">
+<Details primary_table="DRIVER_DETAILS" foreign_table="VEHICLE_DETAILS">
+<PrimaryKeys>
+<ColumnName name="DRIVER_ID" />
+</PrimaryKeys>
+<ForeignKeys>
+<ColumnName name="DRIVER_ID" />
+</ForeignKeys>
+</Details>
+<Drawing routingType="0" />
+</Relationship>
+</Relationships>
+</ERDiagram>

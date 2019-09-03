@@ -1,0 +1,1 @@
+create sequence location start with 701 increment by 1;
